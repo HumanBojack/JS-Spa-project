@@ -1,0 +1,36 @@
+body {
+	background-color: $dark-shades;
+
+	&, * {
+		margin: 0;
+		padding: 0;
+	}
+
+	.main_wrapper {
+		width: 80%;
+		margin: auto;
+		display: grid;
+	}
+}
+
+h1 {
+	font-family: 'LibreBaskerville';
+}
+h2 {
+	font-family: 'Nunito';
+}
+p, a {
+	font-family: 'Yantramanav';
+}
+
+nav {
+	@include flexCenter;
+	justify-content: flex-end;
+	&, & form {
+		background-color: $light-accent;
+	}
+	& form img {
+		width: 50px;
+		color: black;
+	}
+}

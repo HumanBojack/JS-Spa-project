@@ -1,0 +1,59 @@
+p {
+  color: #EDE347;
+}
+
+body {
+  background-color: #29282D;
+}
+body, body * {
+  margin: 0;
+  padding: 0;
+}
+body .main_wrapper {
+  width: 80%;
+  margin: auto;
+  display: grid;
+}
+
+h1 {
+  font-family: "LibreBaskerville";
+}
+
+h2 {
+  font-family: "Nunito";
+}
+
+p, a {
+  font-family: "Yantramanav";
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-content: flex-end;
+}
+nav, nav form {
+  background-color: #849EA3;
+}
+nav form img {
+  width: 50px;
+  color: black;
+}
+
+p {
+  color: #EDE347;
+}
+
+@font-face {
+  font-family: "LibreBaskerville";
+  src: url(fonts/a27f99ca45522bb3d56d18c0822142d4.ttf);
+}
+@font-face {
+  font-family: "Nunito";
+  src: url(fonts/e4eb7682710458841b1080acceacd501.ttf);
+}
+@font-face {
+  font-family: "Yantramanav";
+  src: url(fonts/55a06057a8939980fb51ba72bcb89f6a.ttf);
+}

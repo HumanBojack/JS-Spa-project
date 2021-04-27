@@ -9,6 +9,17 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/sass/style.scss":
+/*!*****************************!*\
+  !*** ./src/sass/style.scss ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://spa_game_website/./src/sass/style.scss?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -16,17 +27,37 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/style.scss */ \"./src/sass/style.scss\");\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log(\"index.js\");\n\n//# sourceURL=webpack://spa_game_website/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/style.scss */ \"./src/sass/style.scss\");\n\nconst pageList = __webpack_require__(/*! ./pageList */ \"./src/js/pageList.js\");\nconst pageDetail = __webpack_require__(/*! ./pageDetail */ \"./src/js/pageDetail.js\");\nconst router = __webpack_require__(/*! ./router */ \"./src/js/router.js\")\n\nconsole.log(\"index.js\");\npageList();\npageDetail();\n\nconst getRoute = () => {\n\tlet path = window.location.hash.substring(1).split(\"/\");\n\tlet pageArgument = path[1] || \"\";\n\trouter[path[0]](pageArgument);\n}\n\nwindow.addEventListener(\"hashchange\", getRoute);\nwindow.addEventListener(\"DOMContentLoaded\", getRoute);\n\n//# sourceURL=webpack://spa_game_website/./src/js/index.js?");
 
 /***/ }),
 
-/***/ "./src/sass/style.scss":
-/*!*****************************!*\
-  !*** ./src/sass/style.scss ***!
-  \*****************************/
-/***/ (() => {
+/***/ "./src/js/pageDetail.js":
+/*!******************************!*\
+  !*** ./src/js/pageDetail.js ***!
+  \******************************/
+/***/ ((module) => {
 
-eval("\n\n//# sourceURL=webpack://spa_game_website/./src/sass/style.scss?");
+eval("const pageDetail = () => {\n\tconsole.log(\"this is pageDetail\");\n}\nmodule.exports = pageDetail;\n\n//# sourceURL=webpack://spa_game_website/./src/js/pageDetail.js?");
+
+/***/ }),
+
+/***/ "./src/js/pageList.js":
+/*!****************************!*\
+  !*** ./src/js/pageList.js ***!
+  \****************************/
+/***/ ((module) => {
+
+eval("const pageList = () => {\n\tconsole.log(\"this is pageList\");\n}\nmodule.exports = pageList;\n\n//# sourceURL=webpack://spa_game_website/./src/js/pageList.js?");
+
+/***/ }),
+
+/***/ "./src/js/router.js":
+/*!**************************!*\
+  !*** ./src/js/router.js ***!
+  \**************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("const pageList = __webpack_require__(/*! ./pageList */ \"./src/js/pageList.js\");\nconst pageDetail = __webpack_require__(/*! ./pageDetail */ \"./src/js/pageDetail.js\");\nconst router = {\n\t\"\": pageList,\n\t\"pageList\": pageList,\n\t\"pageDetail\": pageDetail\n}\nmodule.exports = router;\n\n//# sourceURL=webpack://spa_game_website/./src/js/router.js?");
 
 /***/ })
 
@@ -57,35 +88,6 @@ eval("\n\n//# sourceURL=webpack://spa_game_website/./src/sass/style.scss?");
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
