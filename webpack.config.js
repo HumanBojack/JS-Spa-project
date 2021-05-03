@@ -27,9 +27,6 @@ module.exports = {
 				loader: 'html-loader',
 				options: { 
 					minimize: process.env.NODE_ENV != 'development',
-					// attrs: ['img:src']
-					// root: path.resolve(__dirname, 'dist')
-					// preprocessor: 
 				},
 
 			}]

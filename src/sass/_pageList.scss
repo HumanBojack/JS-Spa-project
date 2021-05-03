@@ -1,3 +1,47 @@
-p {
-	color: $primary-color;
+.game {
+	@include flexColumn;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+  border: 1px solid #313036;
+  overflow: hidden;
+  padding: 3px;
+  background-color: $light-accent;
+  border-radius: 5px;
+  
+  & img {
+  	height:300px;
+    width: 100%;
+    border-radius: 2px;
+  }
+  
+  & .title {
+    color: $primary-color;
+    font-size: 1.8em;
+    font-family: 'Nunito';
+    cursor:pointer;
+  }
+  
+  .appear {
+    display: none;
+   	font-size: 1.3em;
+  }
+  
+  &:hover {
+    img {
+      display: none;
+    }
+    
+    .appear {
+      display: block;
+    }
+  }
+}
+
+.pageList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px; 
 }

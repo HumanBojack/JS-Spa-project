@@ -9,7 +9,6 @@ body {
 	.main_wrapper {
 		width: 80%;
 		margin: auto;
-		display: grid;
 	}
 }
 
@@ -23,14 +22,65 @@ p, a {
 	font-family: 'Yantramanav';
 }
 
+a, a:visited {
+	text-decoration: none;
+	position: relative;
+	color: #069;
+	cursor: pointer;
+	
+	&:after {
+		content: '';
+		height: 3px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: #069;
+		transition: 0.2s;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+	
+	&.block {
+		display: block;
+		padding: 0.5em;
+		
+		&:hover {
+			background: #eee;
+		}
+	}
+}
+
 nav {
 	@include flexCenter;
 	justify-content: flex-end;
+	margin-bottom: 5px;
+
 	&, & form {
 		background-color: $light-accent;
 	}
+
+	& form {
+		display:flex;
+		margin: 3px;
+		margin-right: 10px;
+	}
+
+	& form input[type='submit']{
+		display: none;
+	}
+
+	& form input[type='text']{
+		border: 1px solid black;
+		border-radius: 5px;
+		width: 200px;
+		margin-right: 4px;
+		padding-left: 4px;
+	}
+
 	& form img {
-		width: 50px;
-		color: black;
+		@include blackSVG;
 	}
 }
